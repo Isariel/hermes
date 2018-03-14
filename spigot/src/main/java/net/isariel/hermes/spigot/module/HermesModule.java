@@ -4,6 +4,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.name.Names;
 import net.isariel.hermes.api.HermesAPI;
 import net.isariel.hermes.spigot.HermesSpigotPlugin;
+import net.isariel.lycan.spigot.module.LycanModule;
 import org.bukkit.Bukkit;
 import org.bukkit.Server;
 import org.bukkit.plugin.Plugin;
@@ -27,5 +28,7 @@ public class HermesModule extends AbstractModule {
         bind(Plugin.class).annotatedWith(Names.named("hermesPlugin")).toInstance(hermesSpigotPlugin);
         bind(PluginManager.class).toInstance(Bukkit.getPluginManager());
         bind(Server.class).toInstance(Bukkit.getServer());
+
+        install(new LycanModule());
     }
 }
