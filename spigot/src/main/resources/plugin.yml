@@ -1,4 +1,4 @@
-main: net.isariel.gaia.spigot.GaiaSpigotPlugin
+main: net.isariel.hermes.spigot.HermesSpigotPlugin
 version: 1.0
 author: Felix 'SasukeKawaii' Klauke
 website: https://www.isariel.net/
